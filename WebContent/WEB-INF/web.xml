@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <servlet>
+    <description>Initialization</description>
+    <display-name>InitServlet</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>cn.possible2dream.smartchat.action.InitServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/initServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>QueryMessages</servlet-name>
+    <servlet-class>cn.possible2dream.smartchat.action.QueryMessages</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryMessages</servlet-name>
+    <url-pattern>/AServlet</url-pattern>
+  </servlet-mapping>
+  <display-name>SmartChat</display-name>
+  <welcome-file-list>
+    <welcome-file>chat.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>ManageServlet</servlet-name>
+    <servlet-class>cn.possible2dream.smartchat.action.ManageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManageServlet</servlet-name>
+    <url-pattern>/manageServlet</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>cn.possible2dream.smartchat.action.RequestListener</listener-class>
+  </listener>
+</web-app>
